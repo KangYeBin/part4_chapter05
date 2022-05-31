@@ -1,5 +1,6 @@
 package com.yb.part4_chapter05
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -14,7 +15,7 @@ import kotlin.coroutines.CoroutineContext
 class MainActivity : AppCompatActivity(), CoroutineScope {
 
     private lateinit var activityMainBinding: ActivityMainBinding
-    var job = Job()
+    private val job = Job()
 
     private val repositoryDao by lazy { DatabaseProvider.provideDB(applicationContext).repositoryDao() }
 
@@ -26,6 +27,8 @@ class MainActivity : AppCompatActivity(), CoroutineScope {
         activityMainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(activityMainBinding.root)
 
+        initViews()
+
         launch {
             addMockData()
 
@@ -35,6 +38,15 @@ class MainActivity : AppCompatActivity(), CoroutineScope {
                 Log.d("repositories", githubRepositories.toString())
             }
         }
+
+    }
+
+    private fun initViews() = with(activityMainBinding){
+        searchButton.setOnClickListener {
+            startActivity(Intent(this@MainActivity, SearchActivity::class.java))
+
+        }
+
 
     }
 

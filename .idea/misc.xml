@@ -3,7 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android/AndroidStudioProjects/part4_chapter05/app/src/main/res/drawable/ic_circle.xml" value="0.26979166666666665" />
+        <entry key="..\:/Android/AndroidStudioProjects/part4_chapter05/app/src/main/res/drawable/ic_search_24.xml" value="0.26979166666666665" />
+        <entry key="..\:/Android/AndroidStudioProjects/part4_chapter05/app/src/main/res/drawable/ic_star.xml" value="0.26979166666666665" />
         <entry key="..\:/Android/AndroidStudioProjects/part4_chapter05/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Android/AndroidStudioProjects/part4_chapter05/app/src/main/res/layout/activity_search.xml" value="0.19610507246376813" />
+        <entry key="..\:/Android/AndroidStudioProjects/part4_chapter05/app/src/main/res/layout/viewholder_repository_item.xml" value="0.4" />
       </map>
     </option>
   </component>

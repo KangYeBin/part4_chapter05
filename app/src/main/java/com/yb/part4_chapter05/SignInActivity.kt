@@ -75,7 +75,6 @@ class SignInActivity : AppCompatActivity(), CoroutineScope {
 
         intent?.data?.getQueryParameter("code")?.let {
             Log.d("data", intent.data.toString())
-            //TODO Access Token 가져오기
             launch(coroutineContext) {
                 showProgress()
                 getAccessToken(it)
@@ -101,7 +100,7 @@ class SignInActivity : AppCompatActivity(), CoroutineScope {
     }
 
     private suspend fun getAccessToken(code: String) = withContext(Dispatchers.IO) {
-        val response = RetrofitUtil.githubApiService.getAccessToken(
+        val response = RetrofitUtil.authApiService.getAccessToken(
             clientId = BuildConfig.GITHUB_CLIENT_ID,
             clientSecret = BuildConfig.GITHUB_CLIENT_SECRET,
             code = code

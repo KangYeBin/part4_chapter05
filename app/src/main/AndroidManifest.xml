@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Part4_chapter05">
         <activity
+            android:name=".RepositoryActivity"
+            android:exported="false" />
+        <activity
             android:name=".SearchActivity"
             android:exported="false" />
         <activity

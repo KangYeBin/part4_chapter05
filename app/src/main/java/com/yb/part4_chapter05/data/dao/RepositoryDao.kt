@@ -17,6 +17,9 @@ interface RepositoryDao {
     @Query("SELECT * FROM GithubRepository")
     suspend fun getAllRepositories(): List<GithubRepoEntity>
 
+    @Query("SELECT * FROM GithubRepository WHERE fullName = :repoName")
+    suspend fun getRepository(repoName: String): GithubRepoEntity?
+
     @Query("DELETE FROM GithubRepository WHERE fullName = :repoName")
     suspend fun remove(repoName: String)
 

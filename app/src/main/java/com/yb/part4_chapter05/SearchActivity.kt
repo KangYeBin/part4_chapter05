@@ -3,7 +3,6 @@ package com.yb.part4_chapter05
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.core.view.isGone
 import androidx.recyclerview.widget.LinearLayoutManager

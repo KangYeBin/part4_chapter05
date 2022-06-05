@@ -32,7 +32,7 @@
         android:layout_marginStart="8dp"
         android:textColor="@color/black"
         android:textStyle="bold"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintTop_toTopOf="@id/ownerProfileImageView"
         app:layout_constraintStart_toEndOf="@id/ownerProfileImageView"
         app:layout_constraintBottom_toTopOf="@id/stargazersCountText"
